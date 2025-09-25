@@ -1,16 +1,19 @@
+'use client';
+
 import NotFound from "@/components/NotFound";
 import HeroSub from "@/components/SharedComponents/HeroSub";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "404 Page | Nicktio ",
+  title: "404 Page | Nicktio",
 };
 
-const ErrorPage = () => {
+export default function NotFoundPage() {
   const breadcrumbLinks = [
     { href: "/", text: "Home" },
     { href: "/contact", text: "404" },
   ];
+
   return (
     <>
       <HeroSub
@@ -21,6 +24,4 @@ const ErrorPage = () => {
       <NotFound />
     </>
   );
-};
-
-export default ErrorPage;
+}
